@@ -36,8 +36,8 @@ namespace Gtkmm2ext {
 class LIBGTKMM2EXT_API TextViewer : public Gtk::Window, public Transmitter
 {
 	Gtk::TextView etext;
-	Gtk::VBox vbox1;
-	Gtk::VBox vbox2;
+	Gtk::Box vbox1;
+	Gtk::Box vbox2;
 	Gtk::ScrolledWindow scrollwin;
 	Gtk::Button dismiss;
 	bool _editable;

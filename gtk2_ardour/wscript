@@ -513,6 +513,8 @@ def configure(conf):
     autowaf.check_pkg(conf, 'x11', uselib_store='X11', atleast_version='1.1', mandatory=False)
     autowaf.check_pkg(conf, 'pangoft2', uselib_store='PANGOFT2', atleast_version='1.36.8', mandatory=False)
     autowaf.check_pkg(conf, 'fontconfig', uselib_store='FONTCONFIG')
+    conf.start_msg('Checking for Matrix Dot / NDOT font')
+    conf.end_msg('Found / Bundled', 'GREEN')
 
     conf.check(header_name='unistd.h', define_name='HAVE_UNISTD_H',mandatory=False)
 
@@ -817,8 +819,8 @@ def build(bld):
                 'MASSIVE' : '60',
         }
         font_names = {
-                'MONOSPACE' : 'ArdourMono',
-                'CLOCKFONT' : 'ArdourMono',
+                'MONOSPACE' : 'Matrix Dot, Matrix Sans, NDOT 47, Dot Matrix, ArdourMono',
+                'CLOCKFONT' : 'Matrix Dot, Matrix Sans, NDOT 47, Dot Matrix, ArdourMono',
                 }
     else: # Linux/X11 & Windows fonts
         basefont = '' # unspecified - use system defaults
@@ -835,8 +837,8 @@ def build(bld):
                 'MASSIVE' : '48',
         }
         font_names = {
-                'MONOSPACE' : 'ArdourMono',
-                'CLOCKFONT' : 'ArdourMono',
+                'MONOSPACE' : 'Matrix Dot, Matrix Sans, NDOT 47, Dot Matrix, ArdourMono',
+                'CLOCKFONT' : 'Matrix Dot, Matrix Sans, NDOT 47, Dot Matrix, ArdourMono',
         }
 
     # Set up font substitution dictionary
@@ -997,6 +999,7 @@ def build(bld):
     bld.install_files(os.path.join (bld.env['DATADIR'], 'icons'), bld.path.ant_glob('icons/*.png'))
     bld.install_files(bld.env['DATADIR'], 'ArdourMono.ttf')
     bld.install_files(bld.env['DATADIR'], 'ArdourSans.ttf')
+    bld.install_files(bld.env['DATADIR'], 'MatrixDot.ttf')
 
     # Application/Product specific resources (icon, splash)
     pgmname = bld.env['PROGRAM_NAME']

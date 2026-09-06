@@ -112,6 +112,7 @@ AudioClock::AudioClock (const string& clock_name, bool transient, const string& 
 	_layout->set_attributes (normal_attributes);
 
 	set_widget_name (widget_name);
+	_layout->set_font_description (ARDOUR_UI_UTILS::clock_font (ARDOUR_UI_UTILS::get_font_for_style (widget_name).to_string ()));
 
 	_mode = BBT; /* lie to force mode switch */
 	AudioClock::set_mode (Timecode);
@@ -351,12 +352,15 @@ AudioClock::set_clock_dimensions (Gtk::Requisition& req)
 	tmp = Pango::Layout::create (get_pango_context());
 
 	if (!get_realized()) {
-		font = get_font_for_style (get_name());
+		font = ARDOUR_UI_UTILS::clock_font (get_font_for_style (get_name()).to_string ());
 	} else {
-		font = style->get_font();
+		font = ARDOUR_UI_UTILS::clock_font (style->get_font().to_string ());
 	}
 
 	tmp->set_font_description (font);
+	if (_layout) {
+		_layout->set_font_description (font);
+	}
 
 	/* this string is the longest thing we will ever display */
 	if (_mode == MinSec)
@@ -2365,8 +2369,9 @@ AudioClock::on_style_changed (const Glib::RefPtr<Gtk::Style>& old_style)
 	CairoWidget::on_style_changed (old_style);
 
 	Glib::RefPtr<Gtk::Style> const& new_style = get_style ();
-	if (_layout && (_layout->get_font_description ().gobj () == 0 || _layout->get_font_description () != new_style->get_font ())) {
-		_layout->set_font_description (new_style->get_font ());
+	if (_layout) {
+		Pango::FontDescription font = ARDOUR_UI_UTILS::clock_font (new_style->get_font ().to_string ());
+		_layout->set_font_description (font);
 		queue_resize ();
 	} else if (get_realized ()) {
 		queue_resize ();

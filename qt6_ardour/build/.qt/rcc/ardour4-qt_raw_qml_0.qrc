@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="/qt/qml/ardour4qt/">
+    <file alias="qml_shell/qml/MainShell.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/MainShell.qml</file>
+    <file alias="qml_shell/qml/components/TopMenuBar.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TopMenuBar.qml</file>
+    <file alias="qml_shell/qml/components/TransportBar.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TransportBar.qml</file>
+    <file alias="qml_shell/qml/components/EditorToolbar.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/EditorToolbar.qml</file>
+    <file alias="qml_shell/qml/components/TrackInspector.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TrackInspector.qml</file>
+    <file alias="qml_shell/qml/components/TrackList.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TrackList.qml</file>
+    <file alias="qml_shell/qml/components/TimelineCanvas.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TimelineCanvas.qml</file>
+    <file alias="qml_shell/qml/components/RightSidebar.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/RightSidebar.qml</file>
+    <file alias="qml_shell/qml/components/StatusBar.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/StatusBar.qml</file>
+    <file alias="qml_shell/qml/components/AddTrackDialog.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/AddTrackDialog.qml</file>
+    <file alias="qml_shell/qml/components/SplashScreen.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/SplashScreen.qml</file>
+    <file alias="qml_shell/qml/components/SessionSetupDialog.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/SessionSetupDialog.qml</file>
+    <file alias="qml_shell/qml/components/MixerConsole.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/MixerConsole.qml</file>
+    <file alias="qml_shell/qml/components/AudioMatrix.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/AudioMatrix.qml</file>
+    <file alias="qml_shell/qml/components/RecorderView.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/RecorderView.qml</file>
+    <file alias="qml_shell/qml/components/TriggerPage.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TriggerPage.qml</file>
+    <file alias="qml_shell/qml/components/PreferencesView.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/PreferencesView.qml</file>
+    <file alias="qml_shell/qml/components/MixerStrip.qml">/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/MixerStrip.qml</file>
+  </qresource>
+</RCC>
+

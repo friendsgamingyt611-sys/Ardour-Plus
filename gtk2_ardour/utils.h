@@ -76,6 +76,7 @@ ArdourCanvas::Points* get_canvas_points (std::string who, uint32_t npoints);
 
 Pango::FontDescription sanitized_font (std::string const&);
 Pango::FontDescription ardour_font (std::string const&);
+Pango::FontDescription clock_font (std::string const&);
 Pango::FontDescription get_font_for_style (std::string widgetname);
 
 void decorate (Gtk::Window& w, Gdk::WMDecoration d);

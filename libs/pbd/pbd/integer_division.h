@@ -38,6 +38,7 @@
 template<typename T>
 T int_div_round (T x, T y)
 {
+	if (y == 0) return 0;
 	/* essentially ((x + (y/2)) / y) but handles signed/negative values correcvtly */
 	return (x + PBD_IDIV_ROUNDING(x,y)) / y ;
 }
@@ -51,6 +52,7 @@ namespace PBD {
 inline
 int64_t muldiv_round (int64_t v, int64_t n, int64_t d)
 {
+	if (d == 0) return 0;
 #ifndef COMPILER_INT128_SUPPORT
 	boost::multiprecision::int512_t bignum = v;
 
@@ -89,6 +91,7 @@ int64_t muldiv_round (int64_t v, int64_t n, int64_t d)
 inline
 int64_t muldiv_floor (int64_t v, int64_t n, int64_t d)
 {
+	if (d == 0) return 0;
 #ifndef COMPILER_INT128_SUPPORT
 	boost::multiprecision::int512_t bignum = v;
 
@@ -119,5 +122,6 @@ int64_t muldiv_floor (int64_t v, int64_t n, int64_t d)
 	return(int64_t) ((_v * _n) / _d);
 #endif
 }
+
 } /* namespace */
 

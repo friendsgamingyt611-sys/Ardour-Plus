@@ -1,0 +1,280 @@
+/*
+ * Ardour GTK4 — Main Style Sheet
+ * Phase 0: Preferences Window
+ * Imports colour tokens and styles all Libadwaita + custom widgets.
+ */
+
+@import url("colours.css");
+
+/* ─── Typography ─────────────────────────────────────────── */
+* {
+    font-family: "Inter", "ArdourSans", "Cantarell", sans-serif;
+    -gtk-dpi: 96;
+}
+
+/* ─── Window & Background ────────────────────────────────── */
+window {
+    background-color: @window_bg_color;
+    color: @window_fg_color;
+}
+
+/* ─── Header bar ─────────────────────────────────────────── */
+headerbar {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+    border-bottom: 1px solid alpha(@ardour_neutral_fg, 0.08);
+    min-height: 48px;
+}
+
+headerbar .title {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: @ardour_neutral_fg;
+}
+
+/* ─── Preferences Window sidebar navigation ──────────────── */
+.navigation-sidebar {
+    background-color: @sidebar_bg_color;
+    border-right: 1px solid alpha(@ardour_neutral_fg, 0.07);
+}
+
+.navigation-sidebar row {
+    padding: 6px 16px;
+    border-radius: 6px;
+    margin: 2px 8px;
+    color: @ardour_neutral_fg2;
+    font-size: 13px;
+    transition: background-color 120ms ease, color 80ms ease;
+}
+
+.navigation-sidebar row:selected,
+.navigation-sidebar row.selected {
+    background-color: alpha(@ardour_accent, 0.18);
+    color: @ardour_accent;
+    font-weight: 600;
+}
+
+.navigation-sidebar row:hover:not(:selected) {
+    background-color: alpha(@ardour_neutral_fg, 0.06);
+    color: @ardour_neutral_fg;
+}
+
+/* ─── Preferences page scrolled content area ─────────────── */
+.preferences-page {
+    background-color: transparent;
+    padding: 12px 0;
+}
+
+/* ─── Preference groups (AdwPreferencesGroup equivalent) ─── */
+.preferences-group {
+    background-color: @card_bg_color;
+    border-radius: 12px;
+    margin: 0 16px 16px 16px;
+    border: 1px solid alpha(@ardour_neutral_fg, 0.07);
+}
+
+.preferences-group-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: @ardour_accent;
+    padding: 16px 16px 6px 16px;
+}
+
+/* ─── Individual preference rows ─────────────────────────── */
+row.preference-row {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    border-bottom: 1px solid alpha(@ardour_neutral_fg, 0.06);
+    min-height: 52px;
+    transition: background-color 80ms ease;
+}
+
+row.preference-row:last-child {
+    border-bottom: none;
+}
+
+row.preference-row:hover {
+    background-color: alpha(@ardour_neutral_fg, 0.04);
+}
+
+row.preference-row > box {
+    padding: 12px 16px;
+}
+
+.row-title {
+    font-size: 13px;
+    color: @ardour_neutral_fg;
+    font-weight: 500;
+}
+
+.row-subtitle {
+    font-size: 11px;
+    color: @ardour_neutral_fg2;
+    margin-top: 2px;
+}
+
+/* ─── Switches ───────────────────────────────────────────── */
+switch {
+    background-color: @ardour_neutral_mid;
+    border-radius: 100px;
+    transition: background-color 200ms ease;
+    min-width: 44px;
+    min-height: 24px;
+    border: 1px solid alpha(@ardour_neutral_fg, 0.12);
+}
+
+switch:checked {
+    background-color: @ardour_accent;
+    border-color: @ardour_accent;
+}
+
+switch slider {
+    background-color: @ardour_neutral_fg;
+    border-radius: 100px;
+    box-shadow: 0 1px 3px alpha(black, 0.4);
+}
+
+/* ─── Combo / Drop-down rows ─────────────────────────────── */
+comborow .current-value {
+    color: @ardour_neutral_fg2;
+    font-size: 12px;
+}
+
+/* ─── Spin buttons ───────────────────────────────────────── */
+spinbutton {
+    background-color: @ardour_neutral_mid;
+    border: 1px solid alpha(@ardour_neutral_fg, 0.12);
+    border-radius: 6px;
+    color: @ardour_neutral_fg;
+    min-width: 80px;
+    padding: 4px 8px;
+}
+
+spinbutton:focus {
+    border-color: @ardour_accent;
+    box-shadow: 0 0 0 2px alpha(@ardour_accent, 0.25);
+}
+
+/* ─── Entry rows ─────────────────────────────────────────── */
+entry {
+    background-color: @ardour_neutral_mid;
+    border: 1px solid alpha(@ardour_neutral_fg, 0.12);
+    border-radius: 6px;
+    color: @ardour_neutral_fg;
+    padding: 6px 10px;
+    caret-color: @ardour_accent;
+}
+
+entry:focus {
+    border-color: @ardour_accent;
+    box-shadow: 0 0 0 2px alpha(@ardour_accent, 0.25);
+}
+
+/* ─── Buttons ────────────────────────────────────────────── */
+button {
+    background-color: @ardour_widget_bg;
+    border: 1px solid alpha(@ardour_neutral_fg, 0.14);
+    border-radius: 6px;
+    color: @ardour_neutral_fg;
+    padding: 6px 14px;
+    font-size: 13px;
+    transition: background-color 100ms ease, border-color 100ms ease;
+}
+
+button:hover {
+    background-color: alpha(@ardour_neutral_fg, 0.12);
+    border-color: alpha(@ardour_neutral_fg, 0.22);
+}
+
+button:active {
+    background-color: alpha(@ardour_neutral_fg, 0.18);
+}
+
+button.suggested-action {
+    background-color: @ardour_accent;
+    border-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+button.suggested-action:hover {
+    background-color: mix(@ardour_accent, white, 0.85);
+}
+
+button.destructive-action {
+    background-color: @ardour_danger;
+    border-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+/* ─── Search bar ─────────────────────────────────────────── */
+searchbar {
+    background-color: @ardour_bg1;
+    border-bottom: 1px solid alpha(@ardour_neutral_fg, 0.07);
+    padding: 6px 12px;
+}
+
+searchentry {
+    background-color: @ardour_widget_bg;
+    border-radius: 8px;
+    border: 1px solid alpha(@ardour_neutral_fg, 0.1);
+    color: @ardour_neutral_fg;
+    padding: 6px 12px;
+    min-width: 240px;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: alpha(@ardour_neutral_fg, 0.2);
+    border-radius: 100px;
+    min-width: 6px;
+    min-height: 6px;
+    margin: 2px;
+    transition: background-color 150ms ease, min-width 150ms ease;
+}
+
+scrollbar slider:hover {
+    background-color: alpha(@ardour_neutral_fg, 0.4);
+    min-width: 8px;
+}
+
+/* ─── Section headings ───────────────────────────────────── */
+.section-heading {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: @ardour_neutral_fg2;
+    padding: 20px 32px 8px 32px;
+}
+
+/* ─── Toasts / Banners ───────────────────────────────────── */
+toast {
+    background-color: @ardour_bg1;
+    border-radius: 8px;
+    border: 1px solid alpha(@ardour_neutral_fg, 0.15);
+    box-shadow: 0 4px 16px alpha(black, 0.5);
+    color: @ardour_neutral_fg;
+    padding: 10px 16px;
+}
+
+/* ─── Status page (empty states) ────────────────────────── */
+.status-page .status-page-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: @ardour_neutral_fg;
+}
+
+.status-page .status-page-description {
+    color: @ardour_neutral_fg2;
+    font-size: 14px;
+}

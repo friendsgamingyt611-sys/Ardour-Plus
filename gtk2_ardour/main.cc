@@ -483,6 +483,8 @@ int main (int argc, char *argv[])
 
 	setup_gtk_ardour_enums ();
 
+	Gtkmm2ext::Application::instance()->set_application_id ("org.ardour.Ardour");
+
 	if (UIConfiguration::instance().pre_gui_init ()) {
 		error << _("Could not complete pre-GUI initialization") << endmsg;
 		exit (EXIT_FAILURE);

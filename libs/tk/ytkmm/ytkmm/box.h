@@ -318,6 +318,10 @@ public:
 protected:
   Box();
 public:
+  explicit Box(Orientation orientation, bool homogeneous = false, int spacing = 0);
+  void set_orientation(Orientation orientation);
+  Orientation get_orientation() const;
+
 
   
   /** Left side insert a widget to a box.

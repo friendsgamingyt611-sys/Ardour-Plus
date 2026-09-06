@@ -1,0 +1,15 @@
+-rootPath
+/home/devansh/Documents/Arduor-Plus/qt6_ardour
+-cmake-output
+-output-file
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/qml_imports/ardour4-qt_build.cmake
+-importPath
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build
+-importPath
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt
+-importPath
+/usr/lib64/qt6/qml
+-qrcFiles
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/rcc/qmake_ardour4qt.qrc
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/rcc/ardour4-qt_raw_qml_0.qrc
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/rcc/ardour4-qt_raw_res_0.qrc

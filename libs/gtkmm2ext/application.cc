@@ -42,6 +42,7 @@ Application::instance ()
 }
 
 Application::Application ()
+	: _application_id ("org.ardour.Ardour")
 {
 	gtk_application_init ();
 }
@@ -87,4 +88,16 @@ Application::add_app_menu_item (GtkApplicationMenuGroup* group,
 				MenuItem* item)
 {
 	gtk_application_add_app_menu_item (group, item->gobj());
+}
+
+void
+Application::set_application_id (const std::string& app_id)
+{
+	_application_id = app_id;
+}
+
+const std::string&
+Application::get_application_id () const
+{
+	return _application_id;
 }

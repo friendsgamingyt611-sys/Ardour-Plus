@@ -27,6 +27,7 @@
 #include <glibmm/miscutils.h>
 
 #include <fontconfig/fontconfig.h>
+#include <pango/pangocairo.h>
 
 #include "ardour/ardour.h"
 #include "ardour/filesystem_paths.h"
@@ -143,7 +144,20 @@ load_custom_fonts()
 		}
 	}
 
+	if (find_file (ardour_data_search_path(), "MatrixDot.ttf", font_file)) {
+		FcBool ret = FcConfigAppFontAddFile(config, reinterpret_cast<const FcChar8*>(font_file.c_str()));
+		if (ret == FcTrue) {
+			cerr << "Ardour: [INFO]: Loaded custom Matrix Dot font from " << font_file << endl;
+		} else {
+			cerr << "Ardour: [WARNING]: Failed to load MatrixDot.ttf via FontConfig" << endl;
+		}
+	} else {
+		cerr << "Ardour: [WARNING]: Could not find MatrixDot.ttf in search path" << endl;
+	}
+
 	if (FcFalse == FcConfigSetCurrent(config)) {
 		cerr << _("Failed to set fontconfig configuration.") << endl;
+	} else {
+		pango_cairo_font_map_set_default(NULL);
 	}
 }

@@ -1,0 +1,916 @@
+{
+    "classes": [
+        {
+            "className": "TrackListModel",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "lineNumber": 80,
+                    "name": "TrackRoles",
+                    "values": [
+                        "NameRole",
+                        "TypeRole",
+                        "ColorHexRole",
+                        "IsActiveRole",
+                        "IsMutedRole",
+                        "IsSoloedRole",
+                        "IsRecArmedRole",
+                        "FaderDbRole",
+                        "TrimDbRole",
+                        "PanPosRole",
+                        "HasRegionsRole",
+                        "HeightPxRole",
+                        "IsSelectedRole",
+                        "TrackNumberRole",
+                        "InputNameRole",
+                        "OutputNameRole",
+                        "IsPhaseInvertedRole",
+                        "IsSoloIsoRole",
+                        "IsRecSafeRole",
+                        "PanWidthRole",
+                        "PanBypassRole",
+                        "AutoModeRole",
+                        "VcaGroupRole",
+                        "PeakLeftDbRole",
+                        "PeakRightDbRole",
+                        "PeakClippedRole"
+                    ]
+                }
+            ],
+            "lineNumber": 69,
+            "methods": [
+                {
+                    "access": "public",
+                    "index": 6,
+                    "isConst": true,
+                    "lineNumber": 123,
+                    "name": "markers",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "colorHex",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "hasRegions",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 7,
+                    "lineNumber": 126,
+                    "name": "addTrack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "colorHex",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "isCloned": true,
+                    "lineNumber": 126,
+                    "name": "addTrack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 9,
+                    "isCloned": true,
+                    "lineNumber": 126,
+                    "name": "addTrack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "colorHex",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "hasRegions",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 10,
+                    "lineNumber": 127,
+                    "name": "add_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "colorHex",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "isCloned": true,
+                    "lineNumber": 127,
+                    "name": "add_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 12,
+                    "isCloned": true,
+                    "lineNumber": 127,
+                    "name": "add_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 13,
+                    "lineNumber": 129,
+                    "name": "removeTrack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 14,
+                    "lineNumber": 130,
+                    "name": "remove_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 15,
+                    "lineNumber": 132,
+                    "name": "renameTrack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 16,
+                    "lineNumber": 133,
+                    "name": "rename_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 17,
+                    "lineNumber": 135,
+                    "name": "selectTrack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 18,
+                    "lineNumber": 136,
+                    "name": "select_track",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 19,
+                    "lineNumber": 138,
+                    "name": "toggleMute",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 20,
+                    "lineNumber": 139,
+                    "name": "toggle_mute",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 21,
+                    "lineNumber": 141,
+                    "name": "toggleSolo",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 22,
+                    "lineNumber": 142,
+                    "name": "toggle_solo",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 23,
+                    "lineNumber": 144,
+                    "name": "toggleSoloIso",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 24,
+                    "lineNumber": 145,
+                    "name": "toggle_solo_iso",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 25,
+                    "lineNumber": 147,
+                    "name": "toggleRecArm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 26,
+                    "lineNumber": 148,
+                    "name": "toggle_rec_arm",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 27,
+                    "lineNumber": 150,
+                    "name": "toggleRecSafe",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 28,
+                    "lineNumber": 151,
+                    "name": "toggle_rec_safe",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 29,
+                    "lineNumber": 153,
+                    "name": "togglePhaseInvert",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 30,
+                    "lineNumber": 154,
+                    "name": "toggle_phase_invert",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "db",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 31,
+                    "lineNumber": 156,
+                    "name": "setFader",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "db",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 32,
+                    "lineNumber": 157,
+                    "name": "set_volume",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "db",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 33,
+                    "lineNumber": 159,
+                    "name": "setTrim",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "db",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 34,
+                    "lineNumber": 160,
+                    "name": "set_trim",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "pos",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 35,
+                    "lineNumber": 162,
+                    "name": "setPan",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "pos",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 36,
+                    "lineNumber": 163,
+                    "name": "set_pan",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "width",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 37,
+                    "lineNumber": 165,
+                    "name": "setPanWidth",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "width",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 38,
+                    "lineNumber": 166,
+                    "name": "set_pan_width",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 39,
+                    "lineNumber": 168,
+                    "name": "togglePanBypass",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 40,
+                    "lineNumber": 169,
+                    "name": "toggle_pan_bypass",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "mode",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 41,
+                    "lineNumber": 171,
+                    "name": "setAutomationMode",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "mode",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 42,
+                    "lineNumber": 172,
+                    "name": "set_automation_mode",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "vcaNum",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 43,
+                    "lineNumber": 174,
+                    "name": "setVcaGroup",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "vcaNum",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 44,
+                    "lineNumber": 175,
+                    "name": "set_vca_group",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 45,
+                    "lineNumber": 177,
+                    "name": "resetPeakClip",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 46,
+                    "lineNumber": 178,
+                    "name": "reset_peak_clip",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 47,
+                    "lineNumber": 180,
+                    "name": "zoom_in",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 48,
+                    "lineNumber": 181,
+                    "name": "zoom_out",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 49,
+                    "lineNumber": 182,
+                    "name": "duplicateTrack",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "x",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 50,
+                    "lineNumber": 183,
+                    "name": "jumpToPosition",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 51,
+                    "lineNumber": 184,
+                    "name": "addMarker",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "factor",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 52,
+                    "lineNumber": 185,
+                    "name": "setZoom",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 53,
+                    "lineNumber": 186,
+                    "name": "syncFromSession",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "type",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 54,
+                    "isConst": true,
+                    "lineNumber": 188,
+                    "name": "colorForType",
+                    "returnType": "QString"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "lineNumber": 73,
+                    "name": "selectedIndex",
+                    "notify": "selectedIndexChanged",
+                    "override": false,
+                    "read": "selectedIndex",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "lineNumber": 74,
+                    "name": "zoomFactor",
+                    "notify": "zoomFactorChanged",
+                    "override": false,
+                    "read": "zoomFactor",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "double",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "lineNumber": 75,
+                    "name": "pixelsPerSecond",
+                    "notify": "zoomFactorChanged",
+                    "override": false,
+                    "read": "pixelsPerSecond",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "double",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "lineNumber": 76,
+                    "name": "playheadX",
+                    "notify": "playheadXChanged",
+                    "override": false,
+                    "read": "playheadX",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "double",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "lineNumber": 77,
+                    "name": "trackCount",
+                    "notify": "trackCountChanged",
+                    "override": false,
+                    "read": "trackCount",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "virtual": false
+                }
+            ],
+            "qualifiedClassName": "TrackListModel",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "lineNumber": 192,
+                    "name": "selectedIndexChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "lineNumber": 193,
+                    "name": "zoomFactorChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "lineNumber": 194,
+                    "name": "playheadXChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "lineNumber": 195,
+                    "name": "trackCountChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "lineNumber": 196,
+                    "name": "markersChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "presetType",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "lineNumber": 197,
+                    "name": "addTrackRequested",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QAbstractListModel"
+                }
+            ]
+        }
+    ],
+    "inputFile": "editor_workspace.h",
+    "outputRevision": 69
+}

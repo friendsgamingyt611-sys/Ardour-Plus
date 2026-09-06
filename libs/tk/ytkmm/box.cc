@@ -353,9 +353,27 @@ Box::Box()
   Glib::ObjectBase(0),
   Gtk::Container(Glib::ConstructParams(box_class_.init()))
 {
-  
 
 }
+
+Box::Box(Orientation orientation, bool homogeneous, int spacing)
+:
+  Glib::ObjectBase(0),
+  Gtk::Container(Glib::ConstructParams(box_class_.init(), "homogeneous", static_cast<int>(homogeneous), "spacing", spacing, static_cast<char*>(0)))
+{
+  set_orientation(orientation);
+}
+
+void Box::set_orientation(Orientation orientation)
+{
+  gtk_orientable_set_orientation(GTK_ORIENTABLE(gobj()), static_cast<GtkOrientation>(orientation));
+}
+
+Orientation Box::get_orientation() const
+{
+  return static_cast<Orientation>(gtk_orientable_get_orientation(GTK_ORIENTABLE(gobj())));
+}
+
 
 void Box::pack_start(Widget& child, bool expand, bool fill, guint padding)
 {

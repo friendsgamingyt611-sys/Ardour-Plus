@@ -1,0 +1,5 @@
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4-qt_autogen/include/../SR3GVC6FQO/moc_editor_workspace.cpp.json
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4-qt_autogen/include/../SR3GVC6FQO/moc_session_bridge.cpp.json
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4-qt_autogen/include/../SR3GVC6FQO/moc_theme.cpp.json
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4-qt_autogen/include/../SR3GVC6FQO/moc_transport_bar.cpp.json
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4-qt_autogen/include/../UVA7ML5MI7/moc_qt_route.cpp.json

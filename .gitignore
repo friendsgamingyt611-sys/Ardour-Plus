@@ -152,3 +152,5 @@ waf3-*
 
 # misc custom files git should ignore
 /local
+/built_binaries/
+

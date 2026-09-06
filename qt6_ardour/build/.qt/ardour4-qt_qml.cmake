@@ -1,0 +1,43 @@
+
+set(target "ardour4-qt")
+set(working_dir "/home/devansh/Documents/Arduor-Plus/qt6_ardour")
+set(src_and_dest_list
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/MainShell.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/MainShell.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TopMenuBar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/TopMenuBar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TransportBar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/TransportBar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/EditorToolbar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/EditorToolbar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TrackInspector.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/TrackInspector.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TrackList.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/TrackList.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TimelineCanvas.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/TimelineCanvas.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/RightSidebar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/RightSidebar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/StatusBar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/StatusBar.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/AddTrackDialog.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/AddTrackDialog.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/SplashScreen.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/SplashScreen.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/SessionSetupDialog.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/SessionSetupDialog.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/MixerConsole.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/MixerConsole.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/AudioMatrix.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/AudioMatrix.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/RecorderView.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/RecorderView.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/TriggerPage.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/TriggerPage.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/PreferencesView.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/PreferencesView.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/qml_shell/qml/components/MixerStrip.qml"
+    "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt/qml_shell/qml/components/MixerStrip.qml"
+
+)
+set(timestamp_file "/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/ardour4-qt_qml.txt")

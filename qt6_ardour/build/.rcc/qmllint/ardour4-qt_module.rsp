@@ -1,0 +1,16 @@
+-I
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build
+-I
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt
+-I
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build
+-I
+/usr/lib64/qt6/qml
+--resource
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/rcc/qmake_ardour4qt.qrc
+--resource
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/rcc/ardour4-qt_raw_qml_0.qrc
+--resource
+/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/.qt/rcc/ardour4-qt_raw_res_0.qrc
+--module
+ardour4qt

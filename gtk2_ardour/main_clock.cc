@@ -188,9 +188,9 @@ MainClock::on_size_request (Gtk::Requisition* req)
 	Pango::FontDescription font;
 
   if (!get_realized()) {
-    font = ARDOUR_UI_UTILS::get_font_for_style (get_name());
+    font = ARDOUR_UI_UTILS::clock_font (ARDOUR_UI_UTILS::get_font_for_style (get_name()).to_string ());
   } else {
-    font = style->get_font();
+    font = ARDOUR_UI_UTILS::clock_font (style->get_font().to_string ());
   }
 
   _layout->set_font_description (font);

@@ -1,0 +1,59 @@
+/*
+ * Ardour GTK4 Colour Design Tokens
+ * Derived from gtk2_ardour/themes/dark-ardour.colors
+ * Single source of truth for all GTK4 UI phases.
+ */
+
+@define-color ardour_bg             #242424;
+@define-color ardour_bg1            #313131;
+@define-color ardour_bg2            #161616;
+
+@define-color ardour_neutral_bg     #1e1e1e;
+@define-color ardour_neutral_bg2    rgba(42, 42, 42, 0.996);
+@define-color ardour_neutral_mid    #313131;
+@define-color ardour_neutral_fg     #f1f3f5;
+@define-color ardour_neutral_fg2    #868e96;
+@define-color ardour_neutral_fgest  #f8f9fa;
+
+@define-color ardour_widget_bg      #393939;
+@define-color ardour_widget_blue    #3584e4;
+@define-color ardour_widget_orange  #fd7e14;
+@define-color ardour_widget_green   #57e389;
+@define-color ardour_widget_yellow  #f5c211;
+@define-color ardour_widget_gray    #ced4da;
+@define-color ardour_widget_ruddy   #087f5b;
+
+@define-color ardour_accent         #3584e4;    /* primary accent — blue */
+@define-color ardour_accent_alt     #fd7e14;    /* secondary accent — orange */
+@define-color ardour_accent_clock   #66a3d8;    /* clock/timecode blue */
+@define-color ardour_danger         #fa5252;    /* contrasting/alert red */
+@define-color ardour_selection      #3584e4;
+
+/* Alert palette */
+@define-color ardour_alert_red      #c01c28;
+@define-color ardour_alert_orange   #ff7800;
+@define-color ardour_alert_green    #2ec27e;
+@define-color ardour_alert_blue     #3584e4;
+@define-color ardour_alert_yellow   #f5c211;
+
+/* Meter colours (for Phase 3) */
+@define-color ardour_meter_0        #008800;
+@define-color ardour_meter_2        #00ff00;
+@define-color ardour_meter_4        #fff000;
+@define-color ardour_meter_6        #ff8800;
+@define-color ardour_meter_8        #ff0000;
+
+/* Surface overrides — map into Libadwaita named colours */
+@define-color window_bg_color       @ardour_neutral_bg;
+@define-color window_fg_color       @ardour_neutral_fg;
+@define-color view_bg_color         @ardour_bg1;
+@define-color view_fg_color         @ardour_neutral_fg;
+@define-color headerbar_bg_color    @ardour_bg2;
+@define-color headerbar_fg_color    @ardour_neutral_fg;
+@define-color sidebar_bg_color      @ardour_neutral_bg;
+@define-color card_bg_color         @ardour_widget_bg;
+@define-color popover_bg_color      @ardour_bg1;
+@define-color accent_color          @ardour_accent;
+@define-color accent_bg_color       @ardour_accent;
+@define-color accent_fg_color       @ardour_neutral_fgest;
+@define-color destructive_color     @ardour_danger;

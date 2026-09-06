@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/ardour/Ardour">
+    <file compressed="true">Ardour-icon_16px.png</file>
+    <file compressed="true">Ardour-icon_22px.png</file>
+    <file compressed="true">Ardour-icon_32px.png</file>
+    <file compressed="true">Ardour-icon_48px.png</file>
+    <file compressed="true">Ardour-icon_256px.png</file>
+    <file compressed="true">Ardour-icon_512px.png</file>
+    <file compressed="true">Ardour-splash.png</file>
+    <file compressed="true">Ardour-small-splash.png</file>
+  </gresource>
+</gresources>

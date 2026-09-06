@@ -493,7 +493,7 @@ AutomationLine::delta_to_string (double delta) const
 			default:
 				break;
 		}
-		return u8"\u0394 " + ARDOUR::value_as_string (_desc, delta);
+		return "\xce\x94 " + ARDOUR::value_as_string (_desc, delta);
 	}
 }
 

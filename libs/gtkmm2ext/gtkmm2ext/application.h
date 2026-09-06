@@ -21,6 +21,7 @@
 #ifndef __GTK_APPLICATION_MM_H__
 #define __GTK_APPLICATION_MM_H__
 
+#include <string>
 #include <sigc++/signal.h>
 
 #include "gtkmm2ext/visibility.h"
@@ -50,6 +51,9 @@ public:
     GtkApplicationMenuGroup* add_app_menu_group ();
     void                     add_app_menu_item (GtkApplicationMenuGroup*, Gtk::MenuItem*);
 
+    void                     set_application_id (const std::string& app_id);
+    const std::string&       get_application_id () const;
+
     sigc::signal<void,bool>                 ActivationChanged;
     sigc::signal<void,const Glib::ustring&> ShouldLoad;
     sigc::signal<void>                      ShouldQuit;
@@ -58,6 +62,7 @@ private:
     Application ();
 
     static Application* _instance;
+    std::string         _application_id;
 };
 
 }

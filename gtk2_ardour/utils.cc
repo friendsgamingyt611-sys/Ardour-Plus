@@ -32,6 +32,7 @@
 #endif
 
 #include <cctype>
+#include <iostream>
 #include <clocale>
 #include <cmath>
 #include <cstdlib>
@@ -280,6 +281,8 @@ ARDOUR_UI_UTILS::sanitized_font (std::string const& name)
 	if (fd.get_family ().empty ()) {
 		/* default: "Sans" or "ArdourSans" */
 		fd.set_family (UIConfiguration::instance ().get_ui_font_family ());
+	} else if (fd.get_family ().find ("Mon") != std::string::npos || fd.get_family ().find ("Clock") != std::string::npos) {
+		fd.set_family ("Matrix Dot, Matrix Sans, NDOT 47, Dot Matrix, ArdourMono");
 	}
 
 	return fd;
@@ -289,13 +292,22 @@ Pango::FontDescription
 ARDOUR_UI_UTILS::ardour_font (std::string const& name)
 {
 	Pango::FontDescription fd (name);
-	if (!fd.get_family ().empty () && fd.get_family ().find ("Mon") != std::string::npos) {
-		/* matches "ArdourMono", "Monaco" */
-		fd.set_family ("ArdourMono");
+	if (!fd.get_family ().empty () && (fd.get_family ().find ("Mon") != std::string::npos || fd.get_family ().find ("Clock") != std::string::npos)) {
+		/* matches "ArdourMono", "Monaco", "Clock" */
+		fd.set_family ("Matrix Dot, Matrix Sans, NDOT 47, Dot Matrix, ArdourMono");
 	} else {
 		fd.set_family ("ArdourSans");
 	}
 
+	return fd;
+}
+
+Pango::FontDescription
+ARDOUR_UI_UTILS::clock_font (std::string const& name)
+{
+	Pango::FontDescription fd (name);
+	fd.set_family ("Matrix Dot, Matrix Sans, NDOT 47, Dot Matrix, ArdourMono");
+	std::cerr << "[clock_font] input=" << name << " resolved_family=" << fd.get_family() << std::endl;
 	return fd;
 }
 
@@ -321,10 +333,15 @@ ARDOUR_UI_UTILS::get_font_for_style (string widgetname)
 
 		PangoContext* ctxt = (PangoContext*)pango_layout_get_context (const_cast<PangoLayout*> (layout->gobj ()));
 		pfd                = pango_context_get_font_description (ctxt);
-		return Pango::FontDescription (pfd); /* make a copy */
 	}
 
-	return Pango::FontDescription (pfd); /* make a copy */
+	std::string lower_name = widgetname;
+	for (auto& c : lower_name) { c = ::tolower(c); }
+	if (lower_name.find("clock") != std::string::npos || lower_name.find("transport") != std::string::npos || lower_name.find("secondary") != std::string::npos) {
+		return ARDOUR_UI_UTILS::clock_font (Pango::FontDescription (pfd).to_string ());
+	}
+
+	return ARDOUR_UI_UTILS::ardour_font (Pango::FontDescription (pfd).to_string ());
 }
 
 bool

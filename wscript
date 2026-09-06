@@ -58,7 +58,7 @@ compiler_flags_dictionaries= {
         # Any additional flags for warnings that are specific to C (not C++)
         'extra-c-warnings' : [ '-Wstrict-prototypes', '-Wmissing-prototypes' ],
         # Any additional flags for warnings that are specific to C++ (not C)
-        'extra-cxx-warnings' : [ '-Woverloaded-virtual', '-Wno-unused-local-typedefs', '-Wno-deprecated-copy' ],
+        'extra-cxx-warnings' : [ '-Woverloaded-virtual', '-Wno-unused-local-typedefs', '-Wno-deprecated-copy', '-fno-char8_t' ],
         # Flags used for "strict" compilation, C and C++ (i.e. compiler will warn about language issues)
         'strict' : ['-Wall', '-Wcast-align', '-Wextra', '-Wwrite-strings', '-Wunsafe-loop-optimizations', '-Wlogical-op' ],
         # Flags used for "strict" compilation, C only (i.e. compiler will warn about language issues)
@@ -173,11 +173,15 @@ compiler_flags_dictionaries['clang15-darwin'] = clang15_darwin_dict
 def fetch_git_revision_date ():
     cmd = ["git", "describe", "HEAD"]
     output = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE).communicate()[0].splitlines()
-    rev = re.sub(r"^[A-Za-z0-9]*\+", "", output[0].decode('utf-8'))
+    rev = output[0].decode('utf-8') if output else ""
+    if not rev or "fatal" in rev or not re.match(r'^[0-9]', rev):
+        rev = "8.6-0"
+    else:
+        rev = re.sub(r"^[A-Za-z0-9]*\+", "", rev)
 
     cmd = ["git", "log", "-1", "--pretty=format:%ci", "HEAD"]
     output = subprocess.Popen(cmd, stderr=subprocess.STDOUT, stdout=subprocess.PIPE).communicate()[0].splitlines()
-    date = output[0].decode('utf-8').split(None, 2)[0]
+    date = output[0].decode('utf-8').split(None, 2)[0] if output else "2026-01-01"
 
     return rev, date
 
@@ -1170,7 +1174,7 @@ def configure(conf):
               msg = 'Checking for boost library >= 1.68')
 
     if re.search ("linux", sys.platform) is not None and Options.options.dist_target != 'mingw':
-        autowaf.check_pkg(conf, 'alsa', uselib_store='ALSA')
+        autowaf.check_pkg(conf, 'alsa', uselib_store='ALSA', mandatory=False)
 
     if re.search ("linux", sys.platform) is not None and Options.options.dist_target != 'mingw':
         autowaf.check_pkg(conf, 'libpulse', uselib_store='PULSEAUDIO', mandatory=False)
@@ -1330,6 +1334,8 @@ int main () { __int128 x = 0; return 0; }
 
     conf.env.append_value('CFLAGS', '-DWAF_BUILD')
     conf.env.append_value('CXXFLAGS', '-DWAF_BUILD')
+    if conf.env['CXX_NAME'] == 'gcc':
+        conf.env.append_value('CXXFLAGS', ['-fno-char8_t', '-Wno-deprecated-declarations', '-Wno-deprecated-enum-enum-conversion'])
 
     opts = Options.options
 

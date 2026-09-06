@@ -29,6 +29,8 @@ using namespace sigc;
 TextViewer::TextViewer (size_t xsize, size_t ysize) :
 	Gtk::Window (Gtk::WINDOW_TOPLEVEL),
 	Transmitter (Transmitter::Info), /* channel arg is irrelevant */
+	vbox1 (Gtk::ORIENTATION_VERTICAL),
+	vbox2 (Gtk::ORIENTATION_VERTICAL),
 	dismiss (_("Close"))
 {
 	set_size_request (xsize, ysize);

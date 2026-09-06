@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/ardour4qt">/home/devansh/Documents/Arduor-Plus/qt6_ardour/build/ardour4qt</file>
+
+  </qresource>
+</RCC>

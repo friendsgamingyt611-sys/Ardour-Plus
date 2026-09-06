@@ -1,0 +1,23 @@
+module ardour4qt
+typeinfo ardour4-qt.qmltypes
+prefer :/qt/qml/ardour4qt/
+MainShell 1.0 qml_shell/qml/MainShell.qml
+TopMenuBar 1.0 qml_shell/qml/components/TopMenuBar.qml
+TransportBar 1.0 qml_shell/qml/components/TransportBar.qml
+EditorToolbar 1.0 qml_shell/qml/components/EditorToolbar.qml
+TrackInspector 1.0 qml_shell/qml/components/TrackInspector.qml
+TrackList 1.0 qml_shell/qml/components/TrackList.qml
+TimelineCanvas 1.0 qml_shell/qml/components/TimelineCanvas.qml
+RightSidebar 1.0 qml_shell/qml/components/RightSidebar.qml
+StatusBar 1.0 qml_shell/qml/components/StatusBar.qml
+AddTrackDialog 1.0 qml_shell/qml/components/AddTrackDialog.qml
+SplashScreen 1.0 qml_shell/qml/components/SplashScreen.qml
+SessionSetupDialog 1.0 qml_shell/qml/components/SessionSetupDialog.qml
+MixerConsole 1.0 qml_shell/qml/components/MixerConsole.qml
+AudioMatrix 1.0 qml_shell/qml/components/AudioMatrix.qml
+RecorderView 1.0 qml_shell/qml/components/RecorderView.qml
+TriggerPage 1.0 qml_shell/qml/components/TriggerPage.qml
+PreferencesView 1.0 qml_shell/qml/components/PreferencesView.qml
+MixerStrip 1.0 qml_shell/qml/components/MixerStrip.qml
+depends QtQuick
+
