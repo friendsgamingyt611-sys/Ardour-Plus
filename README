@@ -1,5 +1,11 @@
 Please see the Ardour website at https://ardour.org/ for all documentation.
 
-For information on building Ardour:
+For information on building Ardour-plus:
 
-https://ardour.org/development.html
+Hi! I wanted to update ardour from its old looking UI toolkit (GTK+2 / gtkmm / Cairo) to much more modern QT6 implementation.
+But i understand that it's not that simple task , so it really requires a massive amount of contribution and continuos precise
+structured work , let it be professional , hobbyist , but I hope we can possiby pull this off in our near-future.
+
+This possibly going to be SMALL, NOTHING BIG! :) 
+Also this might reduce the friction of professional DAW users to start using open-source and linux-native DAW's like ARDOUR.
+
