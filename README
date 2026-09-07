@@ -9,3 +9,7 @@ structured work , let it be professional , hobbyist , but I hope we can possiby 
 This possibly going to be SMALL, NOTHING BIG! :) 
 Also this might reduce the friction of professional DAW users to start using open-source and linux-native DAW's like ARDOUR.
 
+*CURRENT IMPLEMENTATION STATUS:-
+Qt 6 Ardour currently ships a functional core editor (workspace) with transport, route strips, session handling, and theming. Those are the pieces you’ll see when you run the Qt 6 build.
+The bulk of the UI (all the specialised dialogs, strip variants, video‑monitor, cue boxes, automation panels, etc.) has not yet been ported. They still live only in the GTK 2 source tree.
+Numbers in plain terms – out of the ~ 250 GTK 2 UI components, about 50 are implemented in Qt 6; ≈ 200 are still missing.
